@@ -3,6 +3,9 @@ import { MainLayoutComponent } from './layout/main/main-layout.component';
 import { HomeComponent } from './pages/home/home';
 import { ContactComponent } from './pages/contact/contact';
 import { AboutComponent } from './pages/about/about';
+import { SolutionsComponent } from './pages/solutions/solutions';
+import { SupermindsComponent } from './pages/superminds/superminds';
+import { TechnologyComponent } from './pages/technology/technology';
 
 
 export const routes: Routes = [
@@ -30,6 +33,21 @@ export const routes: Routes = [
                 path: 'About',
                 title: 'MMC Innovations | About',
                 component: AboutComponent,
+            },
+            {
+                path: 'Solutions',
+                title: 'MMC Innovations | Solutions',
+                component: SolutionsComponent,
+            },
+            {
+                path: 'SuperMinds',
+                title: 'MMC Innovations | SuperMinds',
+                component: SupermindsComponent,
+            },
+            {
+                path: 'Technology',
+                title: 'MMC Innovations | Technology',
+                component: TechnologyComponent,
             },
         ],
     },

@@ -1,0 +1,404 @@
+<section class="bg-(--color-bg)">
+
+  <!-- Hero -->
+  <section
+    class="border-b border-(--color-border) bg-(--color-bg-secondary)"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
+    >
+
+      <div class="max-w-4xl">
+
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+        >
+          Our Solutions
+        </p>
+
+        <h1
+          class="mt-5 text-4xl font-bold leading-[1.05] tracking-tight text-(--color-text) sm:text-5xl lg:text-6xl"
+        >
+          AI-Powered Solutions for
+          <span class="text-(--color-primary)">
+            Mental Healthcare
+          </span>
+        </h1>
+
+        <p
+          class="mt-7 max-w-3xl text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
+        >
+          We build intelligent digital products that support mental
+          health professionals, healthcare organizations, and
+          individuals across different stages of the mental healthcare
+          journey.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Solutions -->
+  <section>
+    <div
+      class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
+    >
+
+      <!-- Section Header -->
+      <div
+        class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between"
+      >
+
+        <div class="max-w-3xl">
+
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+          >
+            What We Build
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
+          >
+            Technology designed around real healthcare needs
+          </h2>
+
+        </div>
+
+        <p
+          class="max-w-md text-sm leading-6 text-(--color-text-secondary)"
+        >
+          From digital mental health platforms to custom AI products,
+          our solutions are designed to make healthcare more accessible,
+          efficient, and connected.
+        </p>
+
+      </div>
+
+
+      <!-- Solution Cards -->
+      <div
+        class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+      >
+
+        @for (solution of solutions; track solution.title; let i = $index) {
+
+          <article
+            class="group flex h-full flex-col rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg sm:p-8"
+          >
+
+            <!-- Number -->
+            <div
+              class="flex h-11 w-11 items-center justify-center rounded-2xl bg-(--color-primary-light)"
+            >
+              <span
+                class="text-sm font-bold text-(--color-primary)"
+              >
+                {{ (i + 1).toString().padStart(2, '0') }}
+              </span>
+            </div>
+
+
+            <!-- Title -->
+            <h3
+              class="mt-7 text-xl font-bold leading-tight text-(--color-text)"
+            >
+              {{ solution.title }}
+            </h3>
+
+
+            <!-- Description -->
+            <p
+              class="mt-4 flex-1 text-sm leading-6 text-(--color-text-secondary)"
+            >
+              {{ solution.description }}
+            </p>
+
+
+            <!-- Bottom Accent -->
+            <div
+              class="mt-8 h-px w-12 bg-(--color-primary) transition-all duration-300 group-hover:w-20"
+            ></div>
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Healthcare Ecosystem -->
+  <section
+    class="border-y border-(--color-border) bg-(--color-bg-secondary)"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
+    >
+
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+        >
+          Who We Serve
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
+        >
+          Solutions for the Mental Healthcare Ecosystem
+        </h2>
+
+        <p
+          class="mt-5 text-base leading-7 text-(--color-text-secondary)"
+        >
+          Our technology supports organizations and professionals
+          across the mental healthcare ecosystem.
+        </p>
+
+      </div>
+
+
+      <!-- Ecosystem Grid -->
+      <div
+        class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+      >
+
+        <div
+          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        >
+          <h3 class="font-semibold text-(--color-text)">
+            Hospitals
+          </h3>
+
+          <p
+            class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
+          >
+            Digital mental healthcare platforms and clinical workflow
+            solutions.
+          </p>
+        </div>
+
+
+        <div
+          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        >
+          <h3 class="font-semibold text-(--color-text)">
+            Mental Health Clinics
+          </h3>
+
+          <p
+            class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
+          >
+            Tools for patient engagement, assessment, monitoring,
+            and care coordination.
+          </p>
+        </div>
+
+
+        <div
+          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        >
+          <h3 class="font-semibold text-(--color-text)">
+            Psychiatrists & Psychologists
+          </h3>
+
+          <p
+            class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
+          >
+            AI-assisted tools that support documentation, insights,
+            follow-up, and practice efficiency.
+          </p>
+        </div>
+
+
+        <div
+          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        >
+          <h3 class="font-semibold text-(--color-text)">
+            Educational Institutions
+          </h3>
+
+          <p
+            class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
+          >
+            Digital mental wellness and student support programs.
+          </p>
+        </div>
+
+
+        <div
+          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        >
+          <h3 class="font-semibold text-(--color-text)">
+            Corporate Organisations
+          </h3>
+
+          <p
+            class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
+          >
+            Technology-enabled employee mental wellness and
+            engagement solutions.
+          </p>
+        </div>
+
+
+        <div
+          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        >
+          <h3 class="font-semibold text-(--color-text)">
+            Healthcare Startups
+          </h3>
+
+          <p
+            class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
+          >
+            Product engineering and AI development partnerships.
+          </p>
+        </div>
+
+
+        <div
+          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6 sm:col-span-2"
+        >
+          <h3 class="font-semibold text-(--color-text)">
+            Research & Healthcare Institutions
+          </h3>
+
+          <p
+            class="mt-3 max-w-2xl text-sm leading-6 text-(--color-text-secondary)"
+          >
+            Technology platforms that support structured research,
+            insights, and responsible innovation.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Responsible AI -->
+  <section>
+    <div
+      class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
+    >
+
+      <div
+        class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center"
+      >
+
+        <!-- Left -->
+        <div>
+
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+          >
+            Our Approach
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
+          >
+            Responsible technology for better healthcare
+          </h2>
+
+        </div>
+
+
+        <!-- Right -->
+        <div>
+
+          <p
+            class="text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
+          >
+            We combine artificial intelligence, clinical expertise,
+            and human-centered design to create secure technology
+            solutions for mental health professionals, healthcare
+            organizations, and individuals.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+
+            <span
+              class="rounded-full border border-(--color-border) bg-(--color-bg-secondary) px-4 py-2 text-sm text-(--color-text-secondary)"
+            >
+              Responsible AI
+            </span>
+
+            <span
+              class="rounded-full border border-(--color-border) bg-(--color-bg-secondary) px-4 py-2 text-sm text-(--color-text-secondary)"
+            >
+              Clinical Expertise
+            </span>
+
+            <span
+              class="rounded-full border border-(--color-border) bg-(--color-bg-secondary) px-4 py-2 text-sm text-(--color-text-secondary)"
+            >
+              Human-Centered Design
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section
+    class="border-t border-(--color-border) bg-(--color-bg-secondary)"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20"
+    >
+
+      <div
+        class="flex flex-col gap-8 rounded-3xl bg-(--color-footer-bg) px-7 py-10 sm:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-12"
+      >
+
+        <div class="max-w-2xl">
+
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+          >
+            Let's Work Together
+          </p>
+
+          <h2
+            class="mt-3 text-2xl font-bold tracking-tight text-(--color-footer-heading) sm:text-3xl"
+          >
+            Build the future of mental healthcare with us.
+          </h2>
+
+          <p
+            class="mt-4 text-sm leading-6 text-(--color-footer-text)"
+          >
+            Explore how MMC Innovations can support your healthcare
+            organization or technology initiative.
+          </p>
+
+        </div>
+
+        <a
+          routerLink="/Contact"
+          class="inline-flex shrink-0 items-center justify-center rounded-full bg-(--color-primary) px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-(--color-primary-hover)"
+        >
+          Let's Talk
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</section>

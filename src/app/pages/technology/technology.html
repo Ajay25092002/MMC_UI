@@ -1,0 +1,506 @@
+<section class="bg-(--color-bg)">
+
+  <!-- Hero -->
+  <section
+    class="border-b border-(--color-border) bg-(--color-bg-secondary)"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
+    >
+
+      <div
+        class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
+      >
+
+        <!-- Content -->
+        <div>
+
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+          >
+            Our Technology
+          </p>
+
+          <h1
+            class="mt-5 max-w-4xl text-4xl font-bold leading-[1.05] tracking-tight text-(--color-text) sm:text-5xl lg:text-6xl"
+          >
+            Technology Behind Better
+            <span class="text-(--color-primary)">
+              Mental Healthcare
+            </span>
+          </h1>
+
+          <p
+            class="mt-7 max-w-2xl text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
+          >
+            Our technology capabilities help us build secure,
+            intelligent, and scalable platforms for modern mental
+            healthcare delivery.
+          </p>
+
+          <p
+            class="mt-5 max-w-2xl text-base leading-7 text-(--color-text-secondary)"
+          >
+            We use technology to support healthcare professionals,
+            improve accessibility, simplify workflows, and create
+            better user experiences.
+          </p>
+
+        </div>
+
+
+        <!-- Visual -->
+        <div class="w-full">
+
+          <div
+            class="relative mx-auto aspect-square w-full max-w-[500px] overflow-hidden rounded-[2rem] bg-(--color-primary-light) p-6 sm:p-8"
+          >
+
+            <!-- Decorative shapes -->
+            <div
+              class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-(--color-primary) opacity-20"
+            ></div>
+
+            <div
+              class="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-(--color-bg-tertiary) opacity-80"
+            ></div>
+
+
+            <!-- Technology Card -->
+            <div
+              class="absolute inset-8 flex flex-col justify-center rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 shadow-xl sm:inset-12 sm:p-9"
+            >
+
+              <p
+                class="text-xs font-semibold uppercase tracking-[0.18em] text-(--color-primary)"
+              >
+                MMC Innovations
+              </p>
+
+              <h2
+                class="mt-4 text-2xl font-bold leading-tight text-(--color-text) sm:text-3xl"
+              >
+                Intelligent
+                <br />
+                Healthcare
+                <br />
+                Technology
+              </h2>
+
+
+              <div class="mt-7 space-y-3">
+
+                <div class="flex items-center gap-3">
+                  <span
+                    class="h-2.5 w-2.5 shrink-0 rounded-full bg-(--color-primary)"
+                  ></span>
+
+                  <span
+                    class="text-sm text-(--color-text-secondary)"
+                  >
+                    Artificial Intelligence
+                  </span>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <span
+                    class="h-2.5 w-2.5 shrink-0 rounded-full bg-(--color-primary)"
+                  ></span>
+
+                  <span
+                    class="text-sm text-(--color-text-secondary)"
+                  >
+                    Healthcare Analytics
+                  </span>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <span
+                    class="h-2.5 w-2.5 shrink-0 rounded-full bg-(--color-primary)"
+                  ></span>
+
+                  <span
+                    class="text-sm text-(--color-text-secondary)"
+                  >
+                    Secure APIs
+                  </span>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <span
+                    class="h-2.5 w-2.5 shrink-0 rounded-full bg-(--color-primary)"
+                  ></span>
+
+                  <span
+                    class="text-sm text-(--color-text-secondary)"
+                  >
+                    Workflow Automation
+                  </span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Technology Capabilities -->
+  <section>
+    <div
+      class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
+    >
+
+      <!-- Section Heading -->
+      <div class="max-w-3xl">
+
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+        >
+          Technology Capabilities
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
+        >
+          A technology foundation for modern healthcare
+        </h2>
+
+        <p
+          class="mt-5 text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
+        >
+          We combine AI, healthcare analytics, secure infrastructure,
+          digital applications, integrations, and workflow automation
+          to create connected healthcare solutions.
+        </p>
+
+      </div>
+
+
+      <!-- Technology Grid -->
+      <div
+        class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+      >
+
+        @for (technology of technologies; track technology.title; let i = $index) {
+
+          <article
+            class="group flex h-full flex-col rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg sm:p-7"
+          >
+
+            <!-- Number -->
+            <div
+              class="flex h-10 w-10 items-center justify-center rounded-xl bg-(--color-primary-light)"
+            >
+              <span
+                class="text-xs font-bold text-(--color-primary)"
+              >
+                {{ (i + 1).toString().padStart(2, '0') }}
+              </span>
+            </div>
+
+
+            <!-- Title -->
+            <h3
+              class="mt-6 text-lg font-bold leading-tight text-(--color-text)"
+            >
+              {{ technology.title }}
+            </h3>
+
+
+            <!-- Description -->
+            <p
+              class="mt-3 flex-1 text-sm leading-6 text-(--color-text-secondary)"
+            >
+              {{ technology.description }}
+            </p>
+
+
+            <!-- Bottom Accent -->
+            <div
+              class="mt-6 h-px w-10 bg-(--color-primary) transition-all duration-300 group-hover:w-16"
+            ></div>
+
+          </article>
+
+        }
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Technology Philosophy -->
+  <section
+    class="border-y border-(--color-border) bg-(--color-bg-secondary)"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
+    >
+
+      <div
+        class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]"
+      >
+
+        <!-- Heading -->
+        <div>
+
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+          >
+            Built With Purpose
+          </p>
+
+          <h2
+            class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
+          >
+            Technology that serves healthcare
+          </h2>
+
+        </div>
+
+
+        <!-- Description + Principles -->
+        <div>
+
+          <p
+            class="text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
+          >
+            Our technology approach is built around meaningful
+            healthcare needs, responsible AI, scalable architecture,
+            intuitive experiences, and collaboration with healthcare
+            professionals and domain experts.
+          </p>
+
+
+          <div
+            class="mt-10 grid gap-4 sm:grid-cols-2"
+          >
+
+            @for (principle of principles; track principle.title) {
+
+              <article
+                class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+              >
+
+                <div
+                  class="h-2.5 w-2.5 rounded-full bg-(--color-primary)"
+                ></div>
+
+                <h3
+                  class="mt-5 text-base font-bold text-(--color-text)"
+                >
+                  {{ principle.title }}
+                </h3>
+
+                <p
+                  class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
+                >
+                  {{ principle.description }}
+                </p>
+
+              </article>
+
+            }
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Technology Impact -->
+  <section>
+    <div
+      class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
+    >
+
+      <div
+        class="mx-auto max-w-3xl text-center"
+      >
+
+        <p
+          class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+        >
+          Technology With Impact
+        </p>
+
+        <h2
+          class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
+        >
+          Better technology for better healthcare experiences
+        </h2>
+
+        <p
+          class="mt-5 text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
+        >
+          By combining responsible artificial intelligence with
+          clinical expertise, MMC Innovations aims to build products
+          that improve lives and strengthen the mental healthcare
+          ecosystem.
+        </p>
+
+      </div>
+
+
+      <!-- Impact Cards -->
+      <div
+        class="mt-12 grid gap-5 md:grid-cols-3"
+      >
+
+        <div
+          class="rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 text-center"
+        >
+
+          <div
+            class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-(--color-primary-light)"
+          >
+            <span
+              class="text-xl font-bold text-(--color-primary)"
+            >
+              AI
+            </span>
+          </div>
+
+          <h3
+            class="mt-5 text-lg font-bold text-(--color-text)"
+          >
+            Intelligent Systems
+          </h3>
+
+          <p
+            class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
+          >
+            Build smarter digital healthcare products using
+            responsible AI capabilities.
+          </p>
+
+        </div>
+
+
+        <div
+          class="rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 text-center"
+        >
+
+          <div
+            class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-(--color-primary-light)"
+          >
+            <span
+              class="text-xl font-bold text-(--color-primary)"
+            >
+              ↗
+            </span>
+          </div>
+
+          <h3
+            class="mt-5 text-lg font-bold text-(--color-text)"
+          >
+            Better Accessibility
+          </h3>
+
+          <p
+            class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
+          >
+            Use digital technology to make mental healthcare more
+            accessible and connected.
+          </p>
+
+        </div>
+
+
+        <div
+          class="rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 text-center"
+        >
+
+          <div
+            class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-(--color-primary-light)"
+          >
+            <span
+              class="text-xl font-bold text-(--color-primary)"
+            >
+              ⚙
+            </span>
+          </div>
+
+          <h3
+            class="mt-5 text-lg font-bold text-(--color-text)"
+          >
+            Efficient Workflows
+          </h3>
+
+          <p
+            class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
+          >
+            Simplify healthcare workflows and help professionals
+            work more efficiently.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section
+    class="border-t border-(--color-border) bg-(--color-bg-secondary)"
+  >
+    <div
+      class="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20"
+    >
+
+      <div
+        class="flex flex-col gap-8 rounded-3xl bg-(--color-footer-bg) px-7 py-10 sm:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-12"
+      >
+
+        <div class="max-w-2xl">
+
+          <p
+            class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+          >
+            Let's Innovate
+          </p>
+
+          <h2
+            class="mt-3 text-2xl font-bold tracking-tight text-(--color-footer-heading) sm:text-3xl"
+          >
+            Build better healthcare technology with us.
+          </h2>
+
+          <p
+            class="mt-4 text-sm leading-6 text-(--color-footer-text)"
+          >
+            Explore how MMC Innovations can help build intelligent,
+            secure, and scalable healthcare technology solutions.
+          </p>
+
+        </div>
+
+
+        <a
+          routerLink="/Contact"
+          class="inline-flex shrink-0 items-center justify-center rounded-full bg-(--color-primary) px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-(--color-primary-hover)"
+        >
+          Let's Talk
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</section>

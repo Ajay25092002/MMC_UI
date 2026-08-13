@@ -1,14 +1,8 @@
-<header
-  class="sticky top-0 z-50 border-b border-(--color-border) bg-(--color-header-bg)"
->
+<header class="sticky top-0 z-50 border-b border-(--color-border) bg-(--color-header-bg)">
   <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
     <!-- Logo -->
-    <a
-      routerLink="/home"
-      class="text-xl font-bold tracking-tight text-(--color-text)"
-      (click)="closeMenu()"
-    >
+    <a routerLink="/home" class="text-xl font-bold tracking-tight text-(--color-text)" (click)="closeMenu()">
       MMC Innovations
     </a>
 
@@ -16,52 +10,39 @@
     <!-- Desktop Navigation -->
     <nav class="hidden items-center gap-8 lg:flex">
 
-      <a
-        routerLink="Home"
-        routerLinkActive="text-(--color-primary)"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
-      >
+      <!-- Home -->
+      <a routerLink="Home" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
         Home
       </a>
 
-      <a
-        routerLink="About"
-        routerLinkActive="text-(--color-primary)"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
-      >
+      <!-- About -->
+      <a routerLink="About" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
         About
       </a>
 
-      <a
-        routerLink="Solutions"
-        routerLinkActive="text-(--color-primary)"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
-      >
+      <!-- Solutions -->
+      <a routerLink="Solutions" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
         Solutions
       </a>
 
-      <a
-        routerLink="SuperMinds"
-        routerLinkActive="text-(--color-primary)"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
-      >
+      <!-- SuperMinds -->
+      <a routerLink="SuperMinds" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
         SuperMinds
       </a>
 
-      <a
-        routerLink="Technology"
-        routerLinkActive="text-(--color-primary)"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
-      >
+      <!-- Technology -->
+      <a routerLink="Technology" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
         Technology
       </a>
 
-      <a
-        routerLink="Contact"
-        routerLinkActive="text-(--color-primary)"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
-      >
+      <!-- Contact -->
+      <a routerLink="Contact" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
         Contact
       </a>
 
@@ -71,31 +52,67 @@
     <!-- Desktop Actions -->
     <div class="hidden items-center gap-3 lg:flex">
 
-      <!-- Theme Toggle -->
-      <button
-        type="button"
-        (click)="toggleTheme()"
-        class="flex h-10 w-10 items-center justify-center rounded-full border border-(--color-border) text-(--color-text) transition hover:border-(--color-primary) hover:text-(--color-primary)"
-        [attr.aria-label]="
-          isDark ? 'Switch to light theme' : 'Switch to dark theme'
-        "
-        [attr.title]="
-          isDark ? 'Switch to light theme' : 'Switch to dark theme'
-        "
-      >
-        @if (isDark) {
-          <span class="text-lg">☀</span>
-        } @else {
-          <span class="text-lg">☾</span>
-        }
-      </button>
+      <!-- ================================================= -->
+      <!-- Figma Style Theme Toggle -->
+      <!-- ================================================= -->
+
+<!-- Theme Toggle -->
+<button
+  type="button"
+  (click)="toggleTheme()"
+  class="relative flex h-10 w-[88px] items-center rounded-full border border-(--color-border) bg-(--color-bg-secondary) p-1"
+  [attr.aria-label]="
+    isDark ? 'Switch to light theme' : 'Switch to dark theme'
+  "
+  [attr.title]="
+    isDark ? 'Switch to light theme' : 'Switch to dark theme'
+  "
+>
+
+  <!-- Active Round Indicator -->
+  <span
+    class="absolute left-1 top-1 h-8 w-8 rounded-full bg-(--color-card-bg) shadow-sm transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+    [class.translate-x-11]="isDark"
+  ></span>
+
+
+  <!-- Sun -->
+  <span
+    class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+    [class.scale-110]="!isDark"
+    [class.opacity-100]="!isDark"
+    [class.rotate-0]="!isDark"
+    [class.text-(--color-primary)]="!isDark"
+    [class.scale-75]="isDark"
+    [class.opacity-40]="isDark"
+    [class.rotate-45]="isDark"
+    [class.text-(--color-text-muted)]="isDark"
+  >
+    <i class="pi pi-sun text-[15px]"></i>
+  </span>
+
+
+  <!-- Moon -->
+  <span
+    class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+    [class.scale-110]="isDark"
+    [class.opacity-100]="isDark"
+    [class.rotate-0]="isDark"
+    [class.text-(--color-primary)]="isDark"
+    [class.scale-75]="!isDark"
+    [class.opacity-40]="!isDark"
+    [class.-rotate-45]="!isDark"
+    [class.text-(--color-text-muted)]="!isDark"
+  >
+    <i class="pi pi-moon text-[15px]"></i>
+  </span>
+
+</button>
 
 
       <!-- CTA -->
-      <a
-        routerLink="Contact"
-        class="rounded-full bg-(--color-button-bg) px-6 py-3 text-sm font-semibold text-(--color-button-text) transition hover:bg-(--color-primary)"
-      >
+      <a routerLink="Contact"
+        class="rounded-full bg-(--color-button-bg) px-6 py-3 text-sm font-semibold text-(--color-button-text) transition hover:bg-(--color-primary)">
         Let's Talk
       </a>
 
@@ -105,35 +122,72 @@
     <!-- Mobile Actions -->
     <div class="flex items-center gap-2 lg:hidden">
 
-      <!-- Theme Toggle -->
-      <button
-        type="button"
-        (click)="toggleTheme()"
-        class="flex h-10 w-10 items-center justify-center rounded-full border border-(--color-border) text-(--color-text) transition hover:border-(--color-primary) hover:text-(--color-primary)"
-        [attr.aria-label]="
-          isDark ? 'Switch to light theme' : 'Switch to dark theme'
-        "
-      >
-        @if (isDark) {
-          <span class="text-lg">☀</span>
-        } @else {
-          <span class="text-lg">☾</span>
-        }
-      </button>
+      <!-- Mobile Theme Toggle -->
+<!-- Mobile Theme Toggle -->
+<button
+  type="button"
+  (click)="toggleTheme()"
+  class="relative flex h-10 w-[88px] items-center rounded-full border border-(--color-border) bg-(--color-bg-secondary) p-1"
+  [attr.aria-label]="
+    isDark ? 'Switch to light theme' : 'Switch to dark theme'
+  "
+  [attr.title]="
+    isDark ? 'Switch to light theme' : 'Switch to dark theme'
+  "
+>
+
+  <!-- Active Round Indicator -->
+  <span
+    class="absolute left-1 top-1 h-8 w-8 rounded-full bg-(--color-card-bg) shadow-sm transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+    [class.translate-x-11]="isDark"
+  ></span>
 
 
-      <!-- Mobile Menu Button -->
-      <button
-        type="button"
-        class="flex h-10 w-10 items-center justify-center rounded-lg text-(--color-text) hover:bg-(--color-bg-secondary)"
-        (click)="toggleMenu()"
-        aria-label="Toggle navigation"
-      >
+  <!-- Sun -->
+  <span
+    class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+    [class.scale-110]="!isDark"
+    [class.opacity-100]="!isDark"
+    [class.rotate-0]="!isDark"
+    [class.text-(--color-primary)]="!isDark"
+    [class.scale-75]="isDark"
+    [class.opacity-40]="isDark"
+    [class.rotate-45]="isDark"
+    [class.text-(--color-text-muted)]="isDark"
+  >
+    <i class="pi pi-sun text-[15px]"></i>
+  </span>
+
+
+  <!-- Moon -->
+  <span
+    class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+    [class.scale-110]="isDark"
+    [class.opacity-100]="isDark"
+    [class.rotate-0]="isDark"
+    [class.text-(--color-primary)]="isDark"
+    [class.scale-75]="!isDark"
+    [class.opacity-40]="!isDark"
+    [class.-rotate-45]="!isDark"
+    [class.text-(--color-text-muted)]="!isDark"
+  >
+    <i class="pi pi-moon text-[15px]"></i>
+  </span>
+
+</button>
+
+
+      <!-- Mobile Menu -->
+      <button type="button"
+        class="flex h-10 w-10 items-center justify-center rounded-lg text-(--color-text) transition hover:bg-(--color-bg-secondary)"
+        (click)="toggleMenu()" aria-label="Toggle navigation">
+
         @if (menuOpen()) {
-          <span class="text-2xl">×</span>
+        <span class="text-2xl leading-none">×</span>
         } @else {
-          <span class="text-2xl">☰</span>
+        <span class="text-2xl leading-none">☰</span>
         }
+
       </button>
 
     </div>
@@ -141,76 +195,68 @@
   </div>
 
 
+  <!-- ===================================================== -->
   <!-- Mobile Navigation -->
+  <!-- ===================================================== -->
+
   @if (menuOpen()) {
 
-    <div
-      class="border-t border-(--color-border) bg-(--color-header-bg) lg:hidden"
-    >
+  <div class="border-t border-(--color-border) bg-(--color-header-bg) lg:hidden">
 
-      <nav class="flex flex-col gap-1 px-6 py-4">
+    <nav class="flex flex-col gap-1 px-6 py-4">
 
-        <a
-          routerLink="Home"
-          routerLinkActive="bg-(--color-primary-light) text-(--color-primary)"
-          [routerLinkActiveOptions]="{ exact: true }"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
-          (click)="closeMenu()"
-        >
-          Home
-        </a>
+      <!-- Home -->
+      <a routerLink="Home" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
+        Home
+      </a>
 
-        <a
-          routerLink="About"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
-          (click)="closeMenu()"
-        >
-          About
-        </a>
 
-        <a
-          routerLink="Solutions"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
-          (click)="closeMenu()"
-        >
-          Solutions
-        </a>
+      <!-- About -->
+      <a routerLink="About" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
+        About
+      </a>
 
-        <a
-          routerLink="SuperMinds"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
-          (click)="closeMenu()"
-        >
-          SuperMinds
-        </a>
 
-        <a
-          routerLink="Technology"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
-          (click)="closeMenu()"
-        >
-          Technology
-        </a>
+      <!-- Solutions -->
+      <a routerLink="Solutions" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
+        Solutions
+      </a>
 
-        <a
-          routerLink="Contact"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
-          (click)="closeMenu()"
-        >
-          Contact
-        </a>
 
-        <a
-          routerLink="Contact"
-          class="mt-3 rounded-full bg-(--color-button-bg) px-6 py-3 text-center text-sm font-semibold text-(--color-button-text)"
-          (click)="closeMenu()"
-        >
-          Let's Talk
-        </a>
+      <!-- SuperMinds -->
+      <a routerLink="SuperMinds" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
+        SuperMinds
+      </a>
 
-      </nav>
 
-    </div>
+      <!-- Technology -->
+      <a routerLink="Technology" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
+        Technology
+      </a>
+
+
+      <!-- Contact -->
+      <a routerLink="Contact" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
+        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
+        Contact
+      </a>
+
+
+      <!-- Mobile CTA -->
+      <a routerLink="Contact"
+        class="mt-3 rounded-full bg-(--color-button-bg) px-6 py-3 text-center text-sm font-semibold text-(--color-button-text) transition hover:bg-(--color-primary)"
+        (click)="closeMenu()">
+        Let's Talk
+      </a>
+
+    </nav>
+
+  </div>
 
   }
 
