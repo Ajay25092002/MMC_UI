@@ -1,153 +1,208 @@
-<header class="sticky top-0 z-50 border-b  border-slate-200 bg-white">
+<header
+  class="sticky top-0 z-50 border-b border-(--color-border) bg-(--color-header-bg)"
+>
   <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
     <!-- Logo -->
     <a
       routerLink="/home"
-      class="text-xl font-bold tracking-tight text-slate-900"
+      class="text-xl font-bold tracking-tight text-(--color-text)"
       (click)="closeMenu()"
     >
       MMC Innovations
     </a>
 
+
     <!-- Desktop Navigation -->
     <nav class="hidden items-center gap-8 lg:flex">
 
       <a
-        routerLink="/home"
-        routerLinkActive="text-teal-600"
+        routerLink="Home"
+        routerLinkActive="text-(--color-primary)"
         [routerLinkActiveOptions]="{ exact: true }"
-        class="text-sm font-medium text-slate-700 transition hover:text-teal-600"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
       >
         Home
       </a>
 
       <a
-        routerLink="/about"
-        routerLinkActive="text-teal-600"
-        class="text-sm font-medium text-slate-700 transition hover:text-teal-600"
+        routerLink="About"
+        routerLinkActive="text-(--color-primary)"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
       >
         About
       </a>
 
       <a
-        routerLink="/solutions"
-        routerLinkActive="text-teal-600"
-        class="text-sm font-medium text-slate-700 transition hover:text-teal-600"
+        routerLink="Solutions"
+        routerLinkActive="text-(--color-primary)"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
       >
         Solutions
       </a>
 
       <a
-        routerLink="/superminds"
-        routerLinkActive="text-teal-600"
-        class="text-sm font-medium text-slate-700 transition hover:text-teal-600"
+        routerLink="SuperMinds"
+        routerLinkActive="text-(--color-primary)"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
       >
         SuperMinds
       </a>
 
       <a
-        routerLink="/technology"
-        routerLinkActive="text-teal-600"
-        class="text-sm font-medium text-slate-700 transition hover:text-teal-600"
+        routerLink="Technology"
+        routerLinkActive="text-(--color-primary)"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
       >
         Technology
       </a>
 
       <a
-        routerLink="/contact"
-        routerLinkActive="text-teal-600"
-        class="text-sm font-medium text-slate-700 transition hover:text-teal-600"
+        routerLink="Contact"
+        routerLinkActive="text-(--color-primary)"
+        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)"
       >
         Contact
       </a>
 
     </nav>
 
-    <!-- Desktop CTA -->
-    <a
-      routerLink="/contact"
-      class="hidden rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-teal-600 lg:block"
-    >
-      Let's Talk
-    </a>
 
-    <!-- Mobile Menu Button -->
-    <button
-      type="button"
-      class="flex h-10 w-10 items-center justify-center rounded-lg hover:bg-slate-100 lg:hidden"
-      (click)="toggleMenu()"
-      aria-label="Toggle navigation"
-    >
-      @if (menuOpen()) {
-        <span class="text-2xl">×</span>
-      } @else {
-        <span class="text-2xl">☰</span>
-      }
-    </button>
+    <!-- Desktop Actions -->
+    <div class="hidden items-center gap-3 lg:flex">
+
+      <!-- Theme Toggle -->
+      <button
+        type="button"
+        (click)="toggleTheme()"
+        class="flex h-10 w-10 items-center justify-center rounded-full border border-(--color-border) text-(--color-text) transition hover:border-(--color-primary) hover:text-(--color-primary)"
+        [attr.aria-label]="
+          isDark ? 'Switch to light theme' : 'Switch to dark theme'
+        "
+        [attr.title]="
+          isDark ? 'Switch to light theme' : 'Switch to dark theme'
+        "
+      >
+        @if (isDark) {
+          <span class="text-lg">☀</span>
+        } @else {
+          <span class="text-lg">☾</span>
+        }
+      </button>
+
+
+      <!-- CTA -->
+      <a
+        routerLink="Contact"
+        class="rounded-full bg-(--color-button-bg) px-6 py-3 text-sm font-semibold text-(--color-button-text) transition hover:bg-(--color-primary)"
+      >
+        Let's Talk
+      </a>
+
+    </div>
+
+
+    <!-- Mobile Actions -->
+    <div class="flex items-center gap-2 lg:hidden">
+
+      <!-- Theme Toggle -->
+      <button
+        type="button"
+        (click)="toggleTheme()"
+        class="flex h-10 w-10 items-center justify-center rounded-full border border-(--color-border) text-(--color-text) transition hover:border-(--color-primary) hover:text-(--color-primary)"
+        [attr.aria-label]="
+          isDark ? 'Switch to light theme' : 'Switch to dark theme'
+        "
+      >
+        @if (isDark) {
+          <span class="text-lg">☀</span>
+        } @else {
+          <span class="text-lg">☾</span>
+        }
+      </button>
+
+
+      <!-- Mobile Menu Button -->
+      <button
+        type="button"
+        class="flex h-10 w-10 items-center justify-center rounded-lg text-(--color-text) hover:bg-(--color-bg-secondary)"
+        (click)="toggleMenu()"
+        aria-label="Toggle navigation"
+      >
+        @if (menuOpen()) {
+          <span class="text-2xl">×</span>
+        } @else {
+          <span class="text-2xl">☰</span>
+        }
+      </button>
+
+    </div>
 
   </div>
+
 
   <!-- Mobile Navigation -->
   @if (menuOpen()) {
 
-    <div class="border-t border-slate-200 bg-white lg:hidden">
+    <div
+      class="border-t border-(--color-border) bg-(--color-header-bg) lg:hidden"
+    >
 
       <nav class="flex flex-col gap-1 px-6 py-4">
 
         <a
-          routerLink="/home"
-          routerLinkActive="bg-teal-50 text-teal-700"
+          routerLink="Home"
+          routerLinkActive="bg-(--color-primary-light) text-(--color-primary)"
           [routerLinkActiveOptions]="{ exact: true }"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700"
+          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
           (click)="closeMenu()"
         >
           Home
         </a>
 
         <a
-          routerLink="/about"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700"
+          routerLink="About"
+          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
           (click)="closeMenu()"
         >
           About
         </a>
 
         <a
-          routerLink="/solutions"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700"
+          routerLink="Solutions"
+          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
           (click)="closeMenu()"
         >
           Solutions
         </a>
 
         <a
-          routerLink="/superminds"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700"
+          routerLink="SuperMinds"
+          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
           (click)="closeMenu()"
         >
           SuperMinds
         </a>
 
         <a
-          routerLink="/technology"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700"
+          routerLink="Technology"
+          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
           (click)="closeMenu()"
         >
           Technology
         </a>
 
         <a
-          routerLink="/contact"
-          class="rounded-lg px-4 py-3 text-sm font-medium text-slate-700"
+          routerLink="Contact"
+          class="rounded-lg px-4 py-3 text-sm font-medium text-(--color-text-secondary)"
           (click)="closeMenu()"
         >
           Contact
         </a>
 
         <a
-          routerLink="/contact"
-          class="mt-3 rounded-full bg-slate-900 px-6 py-3 text-center text-sm font-semibold text-white"
+          routerLink="Contact"
+          class="mt-3 rounded-full bg-(--color-button-bg) px-6 py-3 text-center text-sm font-semibold text-(--color-button-text)"
           (click)="closeMenu()"
         >
           Let's Talk

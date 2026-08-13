@@ -1,3 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+
+
+:root {
+  /* Existing */
+
+  --color-primary: #0f9f98;
+  --color-primary-hover: #0b8580;
+  --color-primary-light: #e8f8f7;
+
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f8fafc;
+  --color-bg-tertiary: #eef7f6;
+
+  --color-text: #080b1c;
+  --color-text-secondary: #475569;
+  --color-text-muted: #64748b;
+
+  --color-border: #e2e8f0;
+  --color-border-light: #f1f5f9;
+
+  --color-header-bg: #ffffff;
+
+  --color-footer-bg: #050719;
+  --color-footer-heading: #ffffff;
+  --color-footer-text: #94a3b8;
+
+  --color-button-bg: #080b1c;
+  --color-button-text: #ffffff;
+
+  --color-card-bg: #ffffff;
+  --color-card-border: #e2e8f0;
+
+  /* Form */
+  --color-input-bg: #ffffff;
+  --color-input-text: #080b1c;
+  --color-input-placeholder: #94a3b8;
+  --color-input-focus: #0f9f98;
+  --color-input-focus-ring: #d5f3f1;
+}
+
+
+html.dark {
+  --color-primary: #35c8c0;
+  --color-primary-hover: #58d8d1;
+  --color-primary-light: #123b39;
+
+  --color-bg: #080b14;
+  --color-bg-secondary: #101522;
+  --color-bg-tertiary: #14201f;
+
+  --color-text: #f8fafc;
+  --color-text-secondary: #cbd5e1;
+  --color-text-muted: #94a3b8;
+
+  --color-border: #263244;
+  --color-border-light: #1e293b;
+
+  --color-header-bg: #080b14;
+
+  --color-footer-bg: #03040a;
+  --color-footer-heading: #ffffff;
+  --color-footer-text: #94a3b8;
+
+  --color-button-bg: #f8fafc;
+  --color-button-text: #080b14;
+
+  --color-card-bg: #101522;
+  --color-card-border: #263244;
+
+  /* Form */
+  --color-input-bg: #101522;
+  --color-input-text: #f8fafc;
+  --color-input-placeholder: #94a3b8;
+  --color-input-focus: #35c8c0;
+  --color-input-focus-ring: #163f3d;
+}
+
+html {
+    color-scheme: light;
+}
+
+html.dark {
+    color-scheme: dark;
+}
+
+body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
