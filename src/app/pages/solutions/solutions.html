@@ -1,6 +1,9 @@
 <section class="bg-(--color-bg)">
 
-  <!-- Hero -->
+  <!-- ===================================================== -->
+  <!-- HERO -->
+  <!-- ===================================================== -->
+
   <section
     class="border-b border-(--color-border) bg-(--color-bg-secondary)"
   >
@@ -10,14 +13,19 @@
 
       <div class="max-w-4xl">
 
+        <!-- Eyebrow -->
+
         <p
-          class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+          class="solutions-hero-eyebrow text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
         >
           Our Solutions
         </p>
 
+
+        <!-- Heading -->
+
         <h1
-          class="mt-5 text-4xl font-bold leading-[1.05] tracking-tight text-(--color-text) sm:text-5xl lg:text-6xl"
+          class="solutions-hero-title mt-5 text-4xl font-bold leading-[1.05] tracking-tight text-(--color-text) sm:text-5xl lg:text-6xl"
         >
           AI-Powered Solutions for
           <span class="text-(--color-primary)">
@@ -25,8 +33,11 @@
           </span>
         </h1>
 
+
+        <!-- Description -->
+
         <p
-          class="mt-7 max-w-3xl text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
+          class="solutions-hero-description mt-7 max-w-3xl text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
         >
           We build intelligent digital products that support mental
           health professionals, healthcare organizations, and
@@ -40,15 +51,20 @@
   </section>
 
 
-  <!-- Solutions -->
-  <section>
+  <!-- ===================================================== -->
+  <!-- SOLUTIONS -->
+  <!-- ===================================================== -->
+
+  <section class="solutions-section">
+
     <div
       class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
     >
 
       <!-- Section Header -->
+
       <div
-        class="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between"
+        class="solutions-header flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between"
       >
 
         <div class="max-w-3xl">
@@ -59,6 +75,7 @@
             What We Build
           </p>
 
+
           <h2
             class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
           >
@@ -66,6 +83,7 @@
           </h2>
 
         </div>
+
 
         <p
           class="max-w-md text-sm leading-6 text-(--color-text-secondary)"
@@ -78,20 +96,26 @@
       </div>
 
 
-      <!-- Solution Cards -->
+      <!-- Solution Grid -->
+
       <div
-        class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+        class="solutions-grid mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
       >
 
-        @for (solution of solutions; track solution.title; let i = $index) {
+        @for (
+          solution of solutions;
+          track solution.title;
+          let i = $index
+        ) {
 
           <article
-            class="group flex h-full flex-col rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg sm:p-8"
+            class="solution-card group flex h-full flex-col rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg sm:p-8"
           >
 
             <!-- Number -->
+
             <div
-              class="flex h-11 w-11 items-center justify-center rounded-2xl bg-(--color-primary-light)"
+              class="solution-number flex h-11 w-11 items-center justify-center rounded-2xl bg-(--color-primary-light) transition-transform duration-300 group-hover:scale-105"
             >
               <span
                 class="text-sm font-bold text-(--color-primary)"
@@ -102,6 +126,7 @@
 
 
             <!-- Title -->
+
             <h3
               class="mt-7 text-xl font-bold leading-tight text-(--color-text)"
             >
@@ -110,6 +135,7 @@
 
 
             <!-- Description -->
+
             <p
               class="mt-4 flex-1 text-sm leading-6 text-(--color-text-secondary)"
             >
@@ -117,9 +143,11 @@
             </p>
 
 
-            <!-- Bottom Accent -->
+            <!-- Accent -->
+
             <div
-              class="mt-8 h-px w-12 bg-(--color-primary) transition-all duration-300 group-hover:w-20"
+              class="solution-accent mt-8 h-px w-12 bg-(--color-primary) transition-all duration-300 group-hover:w-20"
+              aria-hidden="true"
             ></div>
 
           </article>
@@ -129,18 +157,25 @@
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- Healthcare Ecosystem -->
+  <!-- ===================================================== -->
+  <!-- HEALTHCARE ECOSYSTEM -->
+  <!-- ===================================================== -->
+
   <section
-    class="border-y border-(--color-border) bg-(--color-bg-secondary)"
+    class="ecosystem-section border-y border-(--color-border) bg-(--color-bg-secondary)"
   >
+
     <div
       class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
     >
 
-      <div class="max-w-3xl">
+      <!-- Header -->
+
+      <div class="ecosystem-header max-w-3xl">
 
         <p
           class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
@@ -148,11 +183,13 @@
           Who We Serve
         </p>
 
+
         <h2
           class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
         >
           Solutions for the Mental Healthcare Ecosystem
         </h2>
+
 
         <p
           class="mt-5 text-base leading-7 text-(--color-text-secondary)"
@@ -165,13 +202,17 @@
 
 
       <!-- Ecosystem Grid -->
+
       <div
-        class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
+        class="ecosystem-grid mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"
       >
 
-        <div
-          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        <!-- Hospitals -->
+
+        <article
+          class="ecosystem-card rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6 transition-all duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg"
         >
+
           <h3 class="font-semibold text-(--color-text)">
             Hospitals
           </h3>
@@ -182,12 +223,16 @@
             Digital mental healthcare platforms and clinical workflow
             solutions.
           </p>
-        </div>
+
+        </article>
 
 
-        <div
-          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        <!-- Mental Health Clinics -->
+
+        <article
+          class="ecosystem-card rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6 transition-all duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg"
         >
+
           <h3 class="font-semibold text-(--color-text)">
             Mental Health Clinics
           </h3>
@@ -198,14 +243,18 @@
             Tools for patient engagement, assessment, monitoring,
             and care coordination.
           </p>
-        </div>
+
+        </article>
 
 
-        <div
-          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        <!-- Psychiatrists & Psychologists -->
+
+        <article
+          class="ecosystem-card rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6 transition-all duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg"
         >
+
           <h3 class="font-semibold text-(--color-text)">
-            Psychiatrists & Psychologists
+            Psychiatrists &amp; Psychologists
           </h3>
 
           <p
@@ -214,12 +263,16 @@
             AI-assisted tools that support documentation, insights,
             follow-up, and practice efficiency.
           </p>
-        </div>
+
+        </article>
 
 
-        <div
-          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        <!-- Educational Institutions -->
+
+        <article
+          class="ecosystem-card rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6 transition-all duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg"
         >
+
           <h3 class="font-semibold text-(--color-text)">
             Educational Institutions
           </h3>
@@ -229,12 +282,16 @@
           >
             Digital mental wellness and student support programs.
           </p>
-        </div>
+
+        </article>
 
 
-        <div
-          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        <!-- Corporate Organisations -->
+
+        <article
+          class="ecosystem-card rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6 transition-all duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg"
         >
+
           <h3 class="font-semibold text-(--color-text)">
             Corporate Organisations
           </h3>
@@ -245,12 +302,16 @@
             Technology-enabled employee mental wellness and
             engagement solutions.
           </p>
-        </div>
+
+        </article>
 
 
-        <div
-          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+        <!-- Healthcare Startups -->
+
+        <article
+          class="ecosystem-card rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6 transition-all duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg"
         >
+
           <h3 class="font-semibold text-(--color-text)">
             Healthcare Startups
           </h3>
@@ -260,14 +321,18 @@
           >
             Product engineering and AI development partnerships.
           </p>
-        </div>
+
+        </article>
 
 
-        <div
-          class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6 sm:col-span-2"
+        <!-- Research & Healthcare Institutions -->
+
+        <article
+          class="ecosystem-card rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6 transition-all duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg sm:col-span-2"
         >
+
           <h3 class="font-semibold text-(--color-text)">
-            Research & Healthcare Institutions
+            Research &amp; Healthcare Institutions
           </h3>
 
           <p
@@ -276,16 +341,22 @@
             Technology platforms that support structured research,
             insights, and responsible innovation.
           </p>
-        </div>
+
+        </article>
 
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- Responsible AI -->
-  <section>
+  <!-- ===================================================== -->
+  <!-- RESPONSIBLE AI / OUR APPROACH -->
+  <!-- ===================================================== -->
+
+  <section class="approach-section">
+
     <div
       class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
     >
@@ -295,13 +366,15 @@
       >
 
         <!-- Left -->
-        <div>
+
+        <div class="approach-content">
 
           <p
             class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
           >
             Our Approach
           </p>
+
 
           <h2
             class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
@@ -313,7 +386,8 @@
 
 
         <!-- Right -->
-        <div>
+
+        <div class="approach-details">
 
           <p
             class="text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
@@ -324,22 +398,27 @@
             organizations, and individuals.
           </p>
 
+
+          <!-- Pills -->
+
           <div class="mt-8 flex flex-wrap gap-3">
 
             <span
-              class="rounded-full border border-(--color-border) bg-(--color-bg-secondary) px-4 py-2 text-sm text-(--color-text-secondary)"
+              class="approach-pill rounded-full border border-(--color-border) bg-(--color-bg-secondary) px-4 py-2 text-sm text-(--color-text-secondary) transition-colors duration-200 hover:border-(--color-primary) hover:text-(--color-primary)"
             >
               Responsible AI
             </span>
 
+
             <span
-              class="rounded-full border border-(--color-border) bg-(--color-bg-secondary) px-4 py-2 text-sm text-(--color-text-secondary)"
+              class="approach-pill rounded-full border border-(--color-border) bg-(--color-bg-secondary) px-4 py-2 text-sm text-(--color-text-secondary) transition-colors duration-200 hover:border-(--color-primary) hover:text-(--color-primary)"
             >
               Clinical Expertise
             </span>
 
+
             <span
-              class="rounded-full border border-(--color-border) bg-(--color-bg-secondary) px-4 py-2 text-sm text-(--color-text-secondary)"
+              class="approach-pill rounded-full border border-(--color-border) bg-(--color-bg-secondary) px-4 py-2 text-sm text-(--color-text-secondary) transition-colors duration-200 hover:border-(--color-primary) hover:text-(--color-primary)"
             >
               Human-Centered Design
             </span>
@@ -351,20 +430,27 @@
       </div>
 
     </div>
+
   </section>
 
 
+  <!-- ===================================================== -->
   <!-- CTA -->
+  <!-- ===================================================== -->
+
   <section
-    class="border-t border-(--color-border) bg-(--color-bg-secondary)"
+    class="solutions-cta-section border-t border-(--color-border) bg-(--color-bg-secondary)"
   >
+
     <div
       class="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20"
     >
 
       <div
-        class="flex flex-col gap-8 rounded-3xl bg-(--color-footer-bg) px-7 py-10 sm:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-12"
+        class="solutions-cta flex flex-col gap-8 rounded-3xl bg-(--color-footer-bg) px-7 py-10 sm:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-12"
       >
+
+        <!-- CTA Content -->
 
         <div class="max-w-2xl">
 
@@ -374,11 +460,13 @@
             Let's Work Together
           </p>
 
+
           <h2
             class="mt-3 text-2xl font-bold tracking-tight text-(--color-footer-heading) sm:text-3xl"
           >
             Build the future of mental healthcare with us.
           </h2>
+
 
           <p
             class="mt-4 text-sm leading-6 text-(--color-footer-text)"
@@ -389,9 +477,12 @@
 
         </div>
 
+
+        <!-- CTA Button -->
+
         <a
           routerLink="/Contact"
-          class="inline-flex shrink-0 items-center justify-center rounded-full bg-(--color-primary) px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-(--color-primary-hover)"
+          class="solutions-cta-button inline-flex shrink-0 items-center justify-center rounded-full bg-(--color-primary) px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--color-primary-hover)"
         >
           Let's Talk
         </a>
@@ -399,6 +490,7 @@
       </div>
 
     </div>
+
   </section>
 
 </section>

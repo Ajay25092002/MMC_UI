@@ -1,6 +1,9 @@
 <section class="bg-(--color-bg)">
 
-  <!-- Hero -->
+  <!-- ========================================== -->
+  <!-- HERO -->
+  <!-- ========================================== -->
+
   <section
     class="border-b border-(--color-border) bg-(--color-bg-secondary)"
   >
@@ -12,17 +15,23 @@
         class="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center"
       >
 
-        <!-- Content -->
+        <!-- ====================================== -->
+        <!-- HERO CONTENT -->
+        <!-- ====================================== -->
+
         <div>
 
+          <!-- Eyebrow -->
           <p
-            class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
+            class="technology-hero-eyebrow text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
           >
             Our Technology
           </p>
 
+
+          <!-- Heading -->
           <h1
-            class="mt-5 max-w-4xl text-4xl font-bold leading-[1.05] tracking-tight text-(--color-text) sm:text-5xl lg:text-6xl"
+            class="technology-hero-title mt-5 max-w-4xl text-4xl font-bold leading-[1.05] tracking-tight text-(--color-text) sm:text-5xl lg:text-6xl"
           >
             Technology Behind Better
             <span class="text-(--color-primary)">
@@ -30,16 +39,20 @@
             </span>
           </h1>
 
+
+          <!-- Primary Description -->
           <p
-            class="mt-7 max-w-2xl text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
+            class="technology-hero-description mt-7 max-w-2xl text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
           >
             Our technology capabilities help us build secure,
             intelligent, and scalable platforms for modern mental
             healthcare delivery.
           </p>
 
+
+          <!-- Secondary Description -->
           <p
-            class="mt-5 max-w-2xl text-base leading-7 text-(--color-text-secondary)"
+            class="technology-hero-description-secondary mt-5 max-w-2xl text-base leading-7 text-(--color-text-secondary)"
           >
             We use technology to support healthcare professionals,
             improve accessibility, simplify workflows, and create
@@ -49,34 +62,45 @@
         </div>
 
 
-        <!-- Visual -->
-        <div class="w-full">
+        <!-- ====================================== -->
+        <!-- HERO VISUAL -->
+        <!-- ====================================== -->
+
+        <div class="technology-hero-visual w-full">
 
           <div
             class="relative mx-auto aspect-square w-full max-w-[500px] overflow-hidden rounded-[2rem] bg-(--color-primary-light) p-6 sm:p-8"
           >
 
-            <!-- Decorative shapes -->
+            <!-- Top Decorative Circle -->
             <div
-              class="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-(--color-primary) opacity-20"
-            ></div>
-
-            <div
-              class="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-(--color-bg-tertiary) opacity-80"
+              class="technology-circle-top absolute -right-16 -top-16 h-48 w-48 rounded-full bg-(--color-primary) opacity-20"
             ></div>
 
 
-            <!-- Technology Card -->
+            <!-- Bottom Decorative Circle -->
             <div
-              class="absolute inset-8 flex flex-col justify-center rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 shadow-xl sm:inset-12 sm:p-9"
+              class="technology-circle-bottom absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-(--color-bg-tertiary) opacity-80"
+            ></div>
+
+
+            <!-- ================================= -->
+            <!-- TECHNOLOGY CARD -->
+            <!-- ================================= -->
+
+            <div
+              class="technology-hero-card absolute inset-8 flex flex-col justify-center rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 shadow-xl sm:inset-12 sm:p-9"
             >
 
+              <!-- Card Label -->
               <p
                 class="text-xs font-semibold uppercase tracking-[0.18em] text-(--color-primary)"
               >
                 MMC Innovations
               </p>
 
+
+              <!-- Card Heading -->
               <h2
                 class="mt-4 text-2xl font-bold leading-tight text-(--color-text) sm:text-3xl"
               >
@@ -88,9 +112,14 @@
               </h2>
 
 
+              <!-- Card Features -->
               <div class="mt-7 space-y-3">
 
-                <div class="flex items-center gap-3">
+                <!-- Artificial Intelligence -->
+                <div
+                  class="technology-hero-feature flex items-center gap-3"
+                >
+
                   <span
                     class="h-2.5 w-2.5 shrink-0 rounded-full bg-(--color-primary)"
                   ></span>
@@ -100,9 +129,15 @@
                   >
                     Artificial Intelligence
                   </span>
+
                 </div>
 
-                <div class="flex items-center gap-3">
+
+                <!-- Healthcare Analytics -->
+                <div
+                  class="technology-hero-feature flex items-center gap-3"
+                >
+
                   <span
                     class="h-2.5 w-2.5 shrink-0 rounded-full bg-(--color-primary)"
                   ></span>
@@ -112,9 +147,15 @@
                   >
                     Healthcare Analytics
                   </span>
+
                 </div>
 
-                <div class="flex items-center gap-3">
+
+                <!-- Secure APIs -->
+                <div
+                  class="technology-hero-feature flex items-center gap-3"
+                >
+
                   <span
                     class="h-2.5 w-2.5 shrink-0 rounded-full bg-(--color-primary)"
                   ></span>
@@ -124,9 +165,15 @@
                   >
                     Secure APIs
                   </span>
+
                 </div>
 
-                <div class="flex items-center gap-3">
+
+                <!-- Workflow Automation -->
+                <div
+                  class="technology-hero-feature flex items-center gap-3"
+                >
+
                   <span
                     class="h-2.5 w-2.5 shrink-0 rounded-full bg-(--color-primary)"
                   ></span>
@@ -136,6 +183,7 @@
                   >
                     Workflow Automation
                   </span>
+
                 </div>
 
               </div>
@@ -149,17 +197,27 @@
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- Technology Capabilities -->
-  <section>
+  <!-- ========================================== -->
+  <!-- TECHNOLOGY CAPABILITIES -->
+  <!-- ========================================== -->
+
+  <section class="technology-capabilities-section">
+
     <div
       class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
     >
 
-      <!-- Section Heading -->
-      <div class="max-w-3xl">
+      <!-- ====================================== -->
+      <!-- SECTION HEADER -->
+      <!-- ====================================== -->
+
+      <div
+        class="technology-capabilities-header max-w-3xl"
+      >
 
         <p
           class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
@@ -167,11 +225,13 @@
           Technology Capabilities
         </p>
 
+
         <h2
           class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
         >
           A technology foundation for modern healthcare
         </h2>
+
 
         <p
           class="mt-5 text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
@@ -184,26 +244,36 @@
       </div>
 
 
-      <!-- Technology Grid -->
+      <!-- ====================================== -->
+      <!-- TECHNOLOGY GRID -->
+      <!-- ====================================== -->
+
       <div
-        class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
+        class="technology-grid mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
       >
 
-        @for (technology of technologies; track technology.title; let i = $index) {
+        @for (
+          technology of technologies;
+          track technology.title;
+          let i = $index
+        ) {
 
+          <!-- Technology Card -->
           <article
-            class="group flex h-full flex-col rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg sm:p-7"
+            class="technology-card group flex h-full flex-col rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-(--color-primary) hover:shadow-lg sm:p-7"
           >
 
             <!-- Number -->
             <div
-              class="flex h-10 w-10 items-center justify-center rounded-xl bg-(--color-primary-light)"
+              class="technology-number flex h-10 w-10 items-center justify-center rounded-xl bg-(--color-primary-light)"
             >
+
               <span
                 class="text-xs font-bold text-(--color-primary)"
               >
                 {{ (i + 1).toString().padStart(2, '0') }}
               </span>
+
             </div>
 
 
@@ -225,7 +295,7 @@
 
             <!-- Bottom Accent -->
             <div
-              class="mt-6 h-px w-10 bg-(--color-primary) transition-all duration-300 group-hover:w-16"
+              class="technology-accent mt-6 h-px w-10 bg-(--color-primary)"
             ></div>
 
           </article>
@@ -235,13 +305,18 @@
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- Technology Philosophy -->
+  <!-- ========================================== -->
+  <!-- TECHNOLOGY PHILOSOPHY -->
+  <!-- ========================================== -->
+
   <section
-    class="border-y border-(--color-border) bg-(--color-bg-secondary)"
+    class="technology-philosophy-section border-y border-(--color-border) bg-(--color-bg-secondary)"
   >
+
     <div
       class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
     >
@@ -250,14 +325,18 @@
         class="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]"
       >
 
-        <!-- Heading -->
-        <div>
+        <!-- ==================================== -->
+        <!-- LEFT HEADING -->
+        <!-- ==================================== -->
+
+        <div class="technology-philosophy-content">
 
           <p
             class="text-sm font-semibold uppercase tracking-[0.2em] text-(--color-primary)"
           >
             Built With Purpose
           </p>
+
 
           <h2
             class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
@@ -268,9 +347,13 @@
         </div>
 
 
-        <!-- Description + Principles -->
-        <div>
+        <!-- ==================================== -->
+        <!-- RIGHT CONTENT -->
+        <!-- ==================================== -->
 
+        <div class="technology-philosophy-details">
+
+          <!-- Description -->
           <p
             class="text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
           >
@@ -281,26 +364,39 @@
           </p>
 
 
+          <!-- ================================= -->
+          <!-- PRINCIPLES -->
+          <!-- ================================= -->
+
           <div
-            class="mt-10 grid gap-4 sm:grid-cols-2"
+            class="technology-principles-grid mt-10 grid gap-4 sm:grid-cols-2"
           >
 
-            @for (principle of principles; track principle.title) {
+            @for (
+              principle of principles;
+              track principle.title
+            ) {
 
+              <!-- Principle Card -->
               <article
-                class="rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6"
+                class="technology-principle-card rounded-2xl border border-(--color-card-border) bg-(--color-card-bg) p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
 
+                <!-- Dot -->
                 <div
-                  class="h-2.5 w-2.5 rounded-full bg-(--color-primary)"
+                  class="technology-principle-dot h-2.5 w-2.5 rounded-full bg-(--color-primary)"
                 ></div>
 
+
+                <!-- Title -->
                 <h3
                   class="mt-5 text-base font-bold text-(--color-text)"
                 >
                   {{ principle.title }}
                 </h3>
 
+
+                <!-- Description -->
                 <p
                   class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
                 >
@@ -318,17 +414,26 @@
       </div>
 
     </div>
+
   </section>
 
 
-  <!-- Technology Impact -->
-  <section>
+  <!-- ========================================== -->
+  <!-- TECHNOLOGY IMPACT -->
+  <!-- ========================================== -->
+
+  <section class="technology-impact-section">
+
     <div
       class="mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-28"
     >
 
+      <!-- ====================================== -->
+      <!-- IMPACT HEADER -->
+      <!-- ====================================== -->
+
       <div
-        class="mx-auto max-w-3xl text-center"
+        class="technology-impact-header mx-auto max-w-3xl text-center"
       >
 
         <p
@@ -337,11 +442,13 @@
           Technology With Impact
         </p>
 
+
         <h2
           class="mt-4 text-3xl font-bold tracking-tight text-(--color-text) sm:text-4xl"
         >
           Better technology for better healthcare experiences
         </h2>
+
 
         <p
           class="mt-5 text-base leading-7 text-(--color-text-secondary) sm:text-lg sm:leading-8"
@@ -355,31 +462,45 @@
       </div>
 
 
-      <!-- Impact Cards -->
+      <!-- ====================================== -->
+      <!-- IMPACT GRID -->
+      <!-- ====================================== -->
+
       <div
-        class="mt-12 grid gap-5 md:grid-cols-3"
+        class="technology-impact-grid mt-12 grid gap-5 md:grid-cols-3"
       >
 
+        <!-- ==================================== -->
+        <!-- INTELLIGENT SYSTEMS -->
+        <!-- ==================================== -->
+
         <div
-          class="rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 text-center"
+          class="technology-impact-card rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
 
+          <!-- Icon -->
           <div
-            class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-(--color-primary-light)"
+            class="technology-impact-icon mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-(--color-primary-light)"
           >
+
             <span
               class="text-xl font-bold text-(--color-primary)"
             >
               AI
             </span>
+
           </div>
 
+
+          <!-- Title -->
           <h3
             class="mt-5 text-lg font-bold text-(--color-text)"
           >
             Intelligent Systems
           </h3>
 
+
+          <!-- Description -->
           <p
             class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
           >
@@ -390,26 +511,37 @@
         </div>
 
 
+        <!-- ==================================== -->
+        <!-- BETTER ACCESSIBILITY -->
+        <!-- ==================================== -->
+
         <div
-          class="rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 text-center"
+          class="technology-impact-card rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
 
+          <!-- Icon -->
           <div
-            class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-(--color-primary-light)"
+            class="technology-impact-icon mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-(--color-primary-light)"
           >
+
             <span
               class="text-xl font-bold text-(--color-primary)"
             >
               ↗
             </span>
+
           </div>
 
+
+          <!-- Title -->
           <h3
             class="mt-5 text-lg font-bold text-(--color-text)"
           >
             Better Accessibility
           </h3>
 
+
+          <!-- Description -->
           <p
             class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
           >
@@ -420,26 +552,37 @@
         </div>
 
 
+        <!-- ==================================== -->
+        <!-- EFFICIENT WORKFLOWS -->
+        <!-- ==================================== -->
+
         <div
-          class="rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 text-center"
+          class="technology-impact-card rounded-3xl border border-(--color-card-border) bg-(--color-card-bg) p-7 text-center transition duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
 
+          <!-- Icon -->
           <div
-            class="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-(--color-primary-light)"
+            class="technology-impact-icon mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-(--color-primary-light)"
           >
+
             <span
               class="text-xl font-bold text-(--color-primary)"
             >
               ⚙
             </span>
+
           </div>
 
+
+          <!-- Title -->
           <h3
             class="mt-5 text-lg font-bold text-(--color-text)"
           >
             Efficient Workflows
           </h3>
 
+
+          <!-- Description -->
           <p
             class="mt-3 text-sm leading-6 text-(--color-text-secondary)"
           >
@@ -452,20 +595,30 @@
       </div>
 
     </div>
+
   </section>
 
 
+  <!-- ========================================== -->
   <!-- CTA -->
+  <!-- ========================================== -->
+
   <section
-    class="border-t border-(--color-border) bg-(--color-bg-secondary)"
+    class="technology-cta-section border-t border-(--color-border) bg-(--color-bg-secondary)"
   >
+
     <div
       class="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-20"
     >
 
+      <!-- CTA Card -->
       <div
-        class="flex flex-col gap-8 rounded-3xl bg-(--color-footer-bg) px-7 py-10 sm:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-12"
+        class="technology-cta flex flex-col gap-8 rounded-3xl bg-(--color-footer-bg) px-7 py-10 sm:px-10 lg:flex-row lg:items-center lg:justify-between lg:px-12"
       >
+
+        <!-- ==================================== -->
+        <!-- CTA CONTENT -->
+        <!-- ==================================== -->
 
         <div class="max-w-2xl">
 
@@ -475,11 +628,13 @@
             Let's Innovate
           </p>
 
+
           <h2
             class="mt-3 text-2xl font-bold tracking-tight text-(--color-footer-heading) sm:text-3xl"
           >
             Build better healthcare technology with us.
           </h2>
+
 
           <p
             class="mt-4 text-sm leading-6 text-(--color-footer-text)"
@@ -491,9 +646,13 @@
         </div>
 
 
+        <!-- ==================================== -->
+        <!-- CTA BUTTON -->
+        <!-- ==================================== -->
+
         <a
           routerLink="/Contact"
-          class="inline-flex shrink-0 items-center justify-center rounded-full bg-(--color-primary) px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-(--color-primary-hover)"
+class="technology-cta-button inline-flex shrink-0 items-center justify-center rounded-full bg-(--color-primary) px-7 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:-translate-y-0.5 hover:scale-[1.02] hover:bg-(--color-primary-hover)"
         >
           Let's Talk
         </a>
@@ -501,6 +660,7 @@
       </div>
 
     </div>
+
   </section>
 
 </section>

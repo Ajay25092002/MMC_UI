@@ -1,191 +1,266 @@
-<header class="sticky top-0 z-50 border-b border-(--color-border) bg-(--color-header-bg)">
-  <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
+<header
+  class="sticky top-0 z-50 border-b border-(--color-border) bg-(--color-header-bg)"
+>
+  <!-- ===================================================== -->
+  <!-- HEADER -->
+  <!-- ===================================================== -->
 
-    <!-- Logo -->
-    <a routerLink="/home" class="text-xl font-bold tracking-tight text-(--color-text)" (click)="closeMenu()">
+  <div
+    class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6"
+  >
+
+    <!-- =================================================== -->
+    <!-- LOGO -->
+    <!-- =================================================== -->
+
+    <a
+      routerLink="/home"
+      class="header-logo text-xl font-bold tracking-tight text-(--color-text)"
+      (click)="closeMenu()"
+    >
       MMC Innovations
     </a>
 
 
-    <!-- Desktop Navigation -->
-    <nav class="hidden items-center gap-8 lg:flex">
+    <!-- =================================================== -->
+    <!-- DESKTOP NAVIGATION -->
+    <!-- =================================================== -->
 
-      <!-- Home -->
-      <a routerLink="Home" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
+    <nav
+      class="hidden items-center gap-8 lg:flex"
+      aria-label="Main navigation"
+    >
+
+      <a
+        routerLink="Home"
+        routerLinkActive="!text-(--color-primary)"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="desktop-nav-item text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:text-(--color-primary)"
+      >
         Home
       </a>
 
-      <!-- About -->
-      <a routerLink="About" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
+
+      <a
+        routerLink="About"
+        routerLinkActive="!text-(--color-primary)"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="desktop-nav-item text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:text-(--color-primary)"
+      >
         About
       </a>
 
-      <!-- Solutions -->
-      <a routerLink="Solutions" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
+
+      <a
+        routerLink="Solutions"
+        routerLinkActive="!text-(--color-primary)"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="desktop-nav-item text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:text-(--color-primary)"
+      >
         Solutions
       </a>
 
-      <!-- SuperMinds -->
-      <a routerLink="SuperMinds" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
+
+      <a
+        routerLink="SuperMinds"
+        routerLinkActive="!text-(--color-primary)"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="desktop-nav-item text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:text-(--color-primary)"
+      >
         SuperMinds
       </a>
 
-      <!-- Technology -->
-      <a routerLink="Technology" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
+
+      <a
+        routerLink="Technology"
+        routerLinkActive="!text-(--color-primary)"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="desktop-nav-item text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:text-(--color-primary)"
+      >
         Technology
       </a>
 
-      <!-- Contact -->
-      <a routerLink="Contact" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="text-sm font-medium text-(--color-text-secondary) transition hover:text-(--color-primary)">
+
+      <a
+        routerLink="Contact"
+        routerLinkActive="!text-(--color-primary)"
+        [routerLinkActiveOptions]="{ exact: true }"
+        class="desktop-nav-item text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:text-(--color-primary)"
+      >
         Contact
       </a>
 
     </nav>
 
 
-    <!-- Desktop Actions -->
+    <!-- =================================================== -->
+    <!-- DESKTOP ACTIONS -->
+    <!-- =================================================== -->
+
     <div class="hidden items-center gap-3 lg:flex">
 
-      <!-- ================================================= -->
-      <!-- Figma Style Theme Toggle -->
-      <!-- ================================================= -->
+      <!-- Theme Toggle -->
 
-<!-- Theme Toggle -->
-<button
-  type="button"
-  (click)="toggleTheme()"
-  class="relative flex h-10 w-[88px] items-center rounded-full border border-(--color-border) bg-(--color-bg-secondary) p-1"
-  [attr.aria-label]="
-    isDark ? 'Switch to light theme' : 'Switch to dark theme'
-  "
-  [attr.title]="
-    isDark ? 'Switch to light theme' : 'Switch to dark theme'
-  "
->
+      <button
+        type="button"
+        (click)="toggleTheme()"
+        class="desktop-header-action relative flex h-10 w-[88px] items-center rounded-full border border-(--color-border) bg-(--color-bg-secondary) p-1"
+        [attr.aria-label]="
+          isDark ? 'Switch to light theme' : 'Switch to dark theme'
+        "
+        [attr.title]="
+          isDark ? 'Switch to light theme' : 'Switch to dark theme'
+        "
+      >
 
-  <!-- Active Round Indicator -->
-  <span
-    class="absolute left-1 top-1 h-8 w-8 rounded-full bg-(--color-card-bg) shadow-sm transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-    [class.translate-x-11]="isDark"
-  ></span>
+        <!-- Active Indicator -->
+
+        <span
+          class="absolute left-1 top-1 h-8 w-8 rounded-full bg-(--color-card-bg) shadow-sm transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+          [class.translate-x-11]="isDark"
+        ></span>
 
 
-  <!-- Sun -->
-  <span
-    class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-    [class.scale-110]="!isDark"
-    [class.opacity-100]="!isDark"
-    [class.rotate-0]="!isDark"
-    [class.text-(--color-primary)]="!isDark"
-    [class.scale-75]="isDark"
-    [class.opacity-40]="isDark"
-    [class.rotate-45]="isDark"
-    [class.text-(--color-text-muted)]="isDark"
-  >
-    <i class="pi pi-sun text-[15px]"></i>
-  </span>
+        <!-- Sun -->
+
+        <span
+          class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+          [class.scale-110]="!isDark"
+          [class.opacity-100]="!isDark"
+          [class.rotate-0]="!isDark"
+          [class.text-(--color-primary)]="!isDark"
+          [class.scale-75]="isDark"
+          [class.opacity-40]="isDark"
+          [class.rotate-45]="isDark"
+          [class.text-(--color-text-muted)]="isDark"
+        >
+          <i class="pi pi-sun text-[15px]"></i>
+        </span>
 
 
-  <!-- Moon -->
-  <span
-    class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-    [class.scale-110]="isDark"
-    [class.opacity-100]="isDark"
-    [class.rotate-0]="isDark"
-    [class.text-(--color-primary)]="isDark"
-    [class.scale-75]="!isDark"
-    [class.opacity-40]="!isDark"
-    [class.-rotate-45]="!isDark"
-    [class.text-(--color-text-muted)]="!isDark"
-  >
-    <i class="pi pi-moon text-[15px]"></i>
-  </span>
+        <!-- Moon -->
 
-</button>
+        <span
+          class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+          [class.scale-110]="isDark"
+          [class.opacity-100]="isDark"
+          [class.rotate-0]="isDark"
+          [class.text-(--color-primary)]="isDark"
+          [class.scale-75]="!isDark"
+          [class.opacity-40]="!isDark"
+          [class.-rotate-45]="!isDark"
+          [class.text-(--color-text-muted)]="!isDark"
+        >
+          <i class="pi pi-moon text-[15px]"></i>
+        </span>
+
+      </button>
 
 
       <!-- CTA -->
-      <a routerLink="Contact"
-        class="rounded-full bg-(--color-button-bg) px-6 py-3 text-sm font-semibold text-(--color-button-text) transition hover:bg-(--color-primary)">
+
+      <a
+        routerLink="Contact"
+        class="desktop-header-action rounded-full bg-(--color-button-bg) px-6 py-3 text-sm font-semibold text-(--color-button-text) transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--color-primary)"
+      >
         Let's Talk
       </a>
 
     </div>
 
 
-    <!-- Mobile Actions -->
+    <!-- =================================================== -->
+    <!-- MOBILE ACTIONS -->
+    <!-- =================================================== -->
+
     <div class="flex items-center gap-2 lg:hidden">
 
       <!-- Mobile Theme Toggle -->
-<!-- Mobile Theme Toggle -->
-<button
-  type="button"
-  (click)="toggleTheme()"
-  class="relative flex h-10 w-[88px] items-center rounded-full border border-(--color-border) bg-(--color-bg-secondary) p-1"
-  [attr.aria-label]="
-    isDark ? 'Switch to light theme' : 'Switch to dark theme'
-  "
-  [attr.title]="
-    isDark ? 'Switch to light theme' : 'Switch to dark theme'
-  "
->
 
-  <!-- Active Round Indicator -->
-  <span
-    class="absolute left-1 top-1 h-8 w-8 rounded-full bg-(--color-card-bg) shadow-sm transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-    [class.translate-x-11]="isDark"
-  ></span>
+      <button
+        type="button"
+        (click)="toggleTheme()"
+        class="relative flex h-10 w-[88px] items-center rounded-full border border-(--color-border) bg-(--color-bg-secondary) p-1"
+        [attr.aria-label]="
+          isDark ? 'Switch to light theme' : 'Switch to dark theme'
+        "
+        [attr.title]="
+          isDark ? 'Switch to light theme' : 'Switch to dark theme'
+        "
+      >
 
+        <!-- Active Indicator -->
 
-  <!-- Sun -->
-  <span
-    class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-    [class.scale-110]="!isDark"
-    [class.opacity-100]="!isDark"
-    [class.rotate-0]="!isDark"
-    [class.text-(--color-primary)]="!isDark"
-    [class.scale-75]="isDark"
-    [class.opacity-40]="isDark"
-    [class.rotate-45]="isDark"
-    [class.text-(--color-text-muted)]="isDark"
-  >
-    <i class="pi pi-sun text-[15px]"></i>
-  </span>
+        <span
+          class="absolute left-1 top-1 h-8 w-8 rounded-full bg-(--color-card-bg) shadow-sm transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+          [class.translate-x-11]="isDark"
+        ></span>
 
 
-  <!-- Moon -->
-  <span
-    class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
-    [class.scale-110]="isDark"
-    [class.opacity-100]="isDark"
-    [class.rotate-0]="isDark"
-    [class.text-(--color-primary)]="isDark"
-    [class.scale-75]="!isDark"
-    [class.opacity-40]="!isDark"
-    [class.-rotate-45]="!isDark"
-    [class.text-(--color-text-muted)]="!isDark"
-  >
-    <i class="pi pi-moon text-[15px]"></i>
-  </span>
+        <!-- Sun -->
 
-</button>
+        <span
+          class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+          [class.scale-110]="!isDark"
+          [class.opacity-100]="!isDark"
+          [class.rotate-0]="!isDark"
+          [class.text-(--color-primary)]="!isDark"
+          [class.scale-75]="isDark"
+          [class.opacity-40]="isDark"
+          [class.rotate-45]="isDark"
+          [class.text-(--color-text-muted)]="isDark"
+        >
+          <i class="pi pi-sun text-[15px]"></i>
+        </span>
 
 
-      <!-- Mobile Menu -->
-      <button type="button"
-        class="flex h-10 w-10 items-center justify-center rounded-lg text-(--color-text) transition hover:bg-(--color-bg-secondary)"
-        (click)="toggleMenu()" aria-label="Toggle navigation">
+        <!-- Moon -->
+
+        <span
+          class="relative z-10 flex h-8 w-8 items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.4,0,0.2,1)]"
+          [class.scale-110]="isDark"
+          [class.opacity-100]="isDark"
+          [class.rotate-0]="isDark"
+          [class.text-(--color-primary)]="isDark"
+          [class.scale-75]="!isDark"
+          [class.opacity-40]="!isDark"
+          [class.-rotate-45]="!isDark"
+          [class.text-(--color-text-muted)]="!isDark"
+        >
+          <i class="pi pi-moon text-[15px]"></i>
+        </span>
+
+      </button>
+
+
+      <!-- Mobile Menu Button -->
+
+      <button
+        type="button"
+        class="flex h-10 w-10 items-center justify-center rounded-lg text-(--color-text) transition-colors duration-200 hover:bg-(--color-bg-secondary)"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-label="Toggle navigation"
+      >
 
         @if (menuOpen()) {
-        <span class="text-2xl leading-none">×</span>
+
+          <span
+            class="text-2xl leading-none"
+            aria-hidden="true"
+          >
+            ×
+          </span>
+
         } @else {
-        <span class="text-2xl leading-none">☰</span>
+
+          <span
+            class="text-2xl leading-none"
+            aria-hidden="true"
+          >
+            ☰
+          </span>
+
         }
 
       </button>
@@ -196,67 +271,99 @@
 
 
   <!-- ===================================================== -->
-  <!-- Mobile Navigation -->
+  <!-- MOBILE NAVIGATION -->
   <!-- ===================================================== -->
 
   @if (menuOpen()) {
 
-  <div class="border-t border-(--color-border) bg-(--color-header-bg) lg:hidden">
+    <div
+      class="border-t border-(--color-border) bg-(--color-header-bg) lg:hidden"
+    >
 
-    <nav class="flex flex-col gap-1 px-6 py-4">
+      <nav
+        class="flex flex-col gap-1 px-6 py-4"
+        aria-label="Mobile navigation"
+      >
 
-      <!-- Home -->
-      <a routerLink="Home" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
-        Home
-      </a>
-
-
-      <!-- About -->
-      <a routerLink="About" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
-        About
-      </a>
-
-
-      <!-- Solutions -->
-      <a routerLink="Solutions" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
-        Solutions
-      </a>
+        <a
+          routerLink="Home"
+          routerLinkActive="!text-(--color-primary)"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:bg-(--color-bg-secondary) hover:text-(--color-primary)"
+          (click)="closeMenu()"
+        >
+          Home
+        </a>
 
 
-      <!-- SuperMinds -->
-      <a routerLink="SuperMinds" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
-        SuperMinds
-      </a>
+        <a
+          routerLink="About"
+          routerLinkActive="!text-(--color-primary)"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:bg-(--color-bg-secondary) hover:text-(--color-primary)"
+          (click)="closeMenu()"
+        >
+          About
+        </a>
 
 
-      <!-- Technology -->
-      <a routerLink="Technology" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
-        Technology
-      </a>
+        <a
+          routerLink="Solutions"
+          routerLinkActive="!text-(--color-primary)"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:bg-(--color-bg-secondary) hover:text-(--color-primary)"
+          (click)="closeMenu()"
+        >
+          Solutions
+        </a>
 
 
-      <!-- Contact -->
-      <a routerLink="Contact" routerLinkActive="!text-(--color-primary)" [routerLinkActiveOptions]="{ exact: true }"
-        class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition" (click)="closeMenu()">
-        Contact
-      </a>
+        <a
+          routerLink="SuperMinds"
+          routerLinkActive="!text-(--color-primary)"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:bg-(--color-bg-secondary) hover:text-(--color-primary)"
+          (click)="closeMenu()"
+        >
+          SuperMinds
+        </a>
 
 
-      <!-- Mobile CTA -->
-      <a routerLink="Contact"
-        class="mt-3 rounded-full bg-(--color-button-bg) px-6 py-3 text-center text-sm font-semibold text-(--color-button-text) transition hover:bg-(--color-primary)"
-        (click)="closeMenu()">
-        Let's Talk
-      </a>
+        <a
+          routerLink="Technology"
+          routerLinkActive="!text-(--color-primary)"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:bg-(--color-bg-secondary) hover:text-(--color-primary)"
+          (click)="closeMenu()"
+        >
+          Technology
+        </a>
 
-    </nav>
 
-  </div>
+        <a
+          routerLink="Contact"
+          routerLinkActive="!text-(--color-primary)"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="rounded-xl px-4 py-3 text-sm font-medium text-(--color-text-secondary) transition-colors duration-200 hover:bg-(--color-bg-secondary) hover:text-(--color-primary)"
+          (click)="closeMenu()"
+        >
+          Contact
+        </a>
+
+
+        <!-- Mobile CTA -->
+
+        <a
+          routerLink="Contact"
+          class="mt-3 rounded-full bg-(--color-button-bg) px-6 py-3 text-center text-sm font-semibold text-(--color-button-text) transition-all duration-200 hover:-translate-y-0.5 hover:bg-(--color-primary)"
+          (click)="closeMenu()"
+        >
+          Let's Talk
+        </a>
+
+      </nav>
+
+    </div>
 
   }
 
